@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from '';
 import ReactDOM from 'react-dom';
 
 function ClickButton() {
