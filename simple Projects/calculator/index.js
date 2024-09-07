@@ -1,4 +1,4 @@
- import React, { useState } from 'react';
+ import React, { useState } from '';
 
 function Calculator() {
   const [result, setResult] = useState('');
