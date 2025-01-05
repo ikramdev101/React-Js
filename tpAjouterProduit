@@ -1,0 +1,62 @@
+import "./App.css";
+import { useState } from "react";
+
+export default function App() {
+  const [nom, setNom] = useState("");
+  const [prix, setPrix] = useState("");
+  const [desc, setDesc] = useState("");
+  const [products, setProduct] = useState([]);
+
+  const handlName = (e) => setNom(e.target.value);
+  const hanlPrix = (e) => setPrix(e.target.value);
+  const handlDes = (e) => setDesc(e.target.value);
+
+  const ajouter = () => {
+    if (nom && prix && desc) {
+      setProduct([...products, { nom, prix, desc }]);
+      setNom("");
+      setPrix("");
+      setDesc("");
+    } else {
+      alert("Please fill all fields.");
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    ajouter();
+  };
+
+  return (
+    <div>
+      <h1>Add Products:</h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="">Name:</label>
+        <br />
+        <input type="text" value={nom} onChange={handlName} />
+        <br />
+        <label htmlFor="">Prix:</label>
+        <br />
+        <input type="number" value={prix} onChange={hanlPrix} />
+        <br />
+        <label htmlFor="">Description:</label>
+        <br />
+        <input type="text" value={desc} onChange={handlDes} />
+        <br />
+        <button type="submit">Ajouter</button>
+      </form>
+
+      
+        {products.map((product, index) => (
+         <div  key={index} className="card">
+           <div  className="product">
+            <h1>Title: {product.nom}</h1>
+            <h2>Prix: {product.prix} dh</h2>
+            <p>Description: {product.desc}</p>
+          </div>
+          </div>
+        ))}
+      </div>
+    
+  );
+}
