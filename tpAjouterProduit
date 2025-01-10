@@ -25,6 +25,7 @@ export default function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     ajouter();
+alert('l ajout donne')
   };
 
   return (
