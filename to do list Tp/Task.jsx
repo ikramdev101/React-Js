@@ -1,7 +1,9 @@
 import React from 'react'
 
 function Task(props) {
-
+const supprimer = () => {
+   props.setTask(props.tasks.filter((elem)=> elem.id !==props.task.id ))
+  
  
       
   }
