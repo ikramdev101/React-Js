@@ -1,0 +1,16 @@
+<!-- //step  to start working with redux
+1 instllation 
+2 creation de store avec la methode createStore(reducer) comme ca 
+const store = redux.createStore(reducer)
+2 nkhali store accessible l ga3 l components a traves l provider 
+kanmchi l index.js fi dayri render l component App o kandiro :
+<Provider store = {store (li derna lih création )}><App/> <Provider />
+3 createion deyal reducer : 
+li hatina wast store o hwa li kandifiw fih l update li aydaro 
+const reducer = (staten action )=>{
+switch (){
+case '' : return 
+default : return 
+}}
+
+ -->
